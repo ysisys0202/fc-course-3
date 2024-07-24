@@ -1,6 +1,10 @@
-const { build } = require("esbuild");
+const { build } = require('esbuild');
 
-const run = ({ entryPoints = ["src/index.ts"], pkg, config = {} }) => {
+const run = ({
+  entryPoints = ['src/index.ts'],
+  pkg,
+  config = {},
+}) => {
   const dev = process.argv.includes("--dev");
   const minify = !dev;
 
@@ -20,7 +24,7 @@ const run = ({ entryPoints = ["src/index.ts"], pkg, config = {} }) => {
     target: "es2019",
     watch,
     external,
-    ...config,
+    ...config
   };
 
   Promise.all([
@@ -36,8 +40,8 @@ const run = ({ entryPoints = ["src/index.ts"], pkg, config = {} }) => {
       },
     }),
   ]).catch(() => {
-    console.error("Build Failed");
-    ProcessingInstruction.exit(1);
+    console.error("Build failed");
+    process.exit(1);
   });
 };
 

@@ -47,3 +47,4 @@ dist
 
 # Ignore nx directory
 .nx/
+*storybook.log

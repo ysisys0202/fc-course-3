@@ -1,16 +1,20 @@
 {
   "name": "fc-design-system",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "workspaces": [
     "packages/**/*",
     "services/**/*"
   ],
   "scripts": {
     "build": "nx build",
-    "graph": "nx run-many --target=build --graph"
+    "graph": "nx run-many --target=build --graph",
+    "dev:all": "yarn dev:storybook yarn dev:package",
+    "dev:storybook": "nx storybook @fastcampus/storybook",
+    "dev:package": "nx run-many --target=dev --projects='@fastcampus/react-components-*'"
   },
   "packageManager": "yarn@3.6.3",
   "devDependencies": {
+    "@storybook/addon-docs": "^7.4.0",
     "@typescript-eslint/eslint-plugin": "^6.5.0",
     "@typescript-eslint/parser": "^6.5.0",
     "eslint": "^8.48.0",
@@ -22,8 +26,11 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "eslint-plugin-storybook": "^0.6.13",
-    "nx": "^19.5.2",
+    "nx": "^16.8.1",
     "prettier": "^3.0.3",
-    "typescript": "^5.5.4"
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "vite": "^4.4.9"
   }
 }
