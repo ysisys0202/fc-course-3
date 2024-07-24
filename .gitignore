@@ -28,6 +28,12 @@ dist
 .env
 **/.env
 
+# VS Code
+.vscode/
+
+# Yarn 
+.yarn/
+
 # Yarn cache
 .yarn/*
 !.yarn/patches
