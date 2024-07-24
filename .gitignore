@@ -1,3 +1,4 @@
+*.DS_Store
 *.log
 *.tsbuildinfo
 
@@ -26,3 +27,17 @@ dist
 
 .env
 **/.env
+
+# Yarn cache
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
+
+# Yarn PnP
+.pnp.*
+
+# Ignore nx directory
+.nx/
