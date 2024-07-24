@@ -14,7 +14,7 @@
   "scripts": {
     "build": "yarn clean && yarn build:js && yarn build:type && yarn build:css",
     "build:js": "node build.js",
-    "build:type": "tsc --declaration --emitDeclarationOnly",
+    "build:type": "yarn tsc --declaration --emitDeclarationOnly",
     "build:css": "node ./scripts/build-css-module.js",
     "clean": "rm -rf dist"
   },
