@@ -710,6 +710,7 @@ __metadata:
   resolution: "fc-design-system@workspace:."
   dependencies:
     nx: ^19.5.2
+    typescript: ^5.5.4
   languageName: unknown
   linkType: soft
 
