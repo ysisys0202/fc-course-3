@@ -6,7 +6,11 @@
     "services/**/*"
   ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "nx build",
+    "graph": "nx run-many --target=build --graph"
   },
-  "packageManager": "yarn@4.3.1"
+  "packageManager": "yarn@3.6.3",
+  "devDependencies": {
+    "nx": "^19.5.2"
+  }
 }
